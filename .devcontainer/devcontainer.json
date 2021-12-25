@@ -1,0 +1,34 @@
+{
+	"name": "Spark ML Workshop",
+	"dockerFile": "Dockerfile",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"java.home": "/docker-java-home"
+	},
+	
+	// Add the IDs of extensions you want installed when the container is created.
+	// Uncomment java or python extensions if needed
+	"extensions": [
+		// "vscjava.vscode-java-pack", 
+		// "ms-python.python",
+		// "ms-python.vscode-pylance",
+		"scalameta.metals",
+		"scala-lang.scala"
+	],
+
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.m2,target=/root/.m2,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ivy2,target=/root/.ivy2,type=bind,consistency=cached"
+	]
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version",
+
+	// Uncomment to connect as a non-root user (Also you must change mount paths to /home/vscode/... instead /root/...). See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode"
+}

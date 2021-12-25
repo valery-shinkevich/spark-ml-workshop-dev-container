@@ -1,0 +1,1 @@
+Clone your fork of https://github.com/griddynamics/SparkMLWorkshop here.
